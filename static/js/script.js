@@ -5,12 +5,13 @@ document.getElementById('menu-btn').onclick = function() {
 
 
 // typing animation start
-const fullText = "Turn your trash into cash—recycle and earn while helping the planet!"; // Text to type
+const fullText = "{Turn your trash into cash—recycle and earn while helping the planet!}"; // Text to type
     let index = 0;
     let typing = true;
     const typingSpeed = 100;
-    const deletingSpeed = 50;
-    const pauseDuration = 1000;
+    const deletingSpeed = 30;
+    const pauseDuration = 800;
+    const wateDuration = 5000;
 
     function typeAndDelete() {
         const typewriterElement = document.getElementById("typewriter");
@@ -24,7 +25,7 @@ const fullText = "Turn your trash into cash—recycle and earn while helping the
             } else {
                 // Once typing is complete, pause and then start deleting
                 typing = false;
-                setTimeout(typeAndDelete, pauseDuration);
+                setTimeout(typeAndDelete, wateDuration);
             }
         } else {
             // Deleting the text
@@ -56,7 +57,18 @@ const sidebar = document.getElementById('sidebar');
 
 // Toggle sidebar when the user icon is clicked
 
+// form section
 
+document.getElementById('getStartedBtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor behavior
+    var formContainer = document.getElementById('formContainer');
+    if (formContainer.style.display === "none" || formContainer.style.display === "") {
+        formContainer.style.display = "block";
+    } else {
+        formContainer.style.display = "none";
+    }
+});
+// code for user face end
 
 
 

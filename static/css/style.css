@@ -402,59 +402,57 @@ p.deferent_sub_title {
 /* footer section start */
 
 
-footer{
-    display: block;
-    background: #04d976;
-} 
-
-.helper-action.active button {
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
+footer {
+    background-color: #acd78a; /* Background color for the footer */
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
 }
 
-.helper-action.active ul {
-    bottom: 65px;
-    opacity: 1;
-    transition: .3s;
-    visibility: visible;
-}
-
-
-.helper-action button {
-    align-items: center;
-    background: #008037;
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    cursor: pointer;
+.f-info {
+    height: auto; /* Let the height adjust based on content */
     display: flex;
-    font-size: 35px;
-    height: 100%;
-    justify-content: center;
-    outline: none;
-    padding: 8px;
-    position: relative;
-    transition: .3s ease-in-out;
-    width: 100%;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 10px; /* Space between items */
+    padding: 50px 0; /* Add padding for better spacing */
 }
 
-footer.footer_section p {
-    margin: 0;
-    align-items: center;
-    /* color: #fff;
-    color: #f6faf5; */
-    display: flex;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    line-height: 29px;
-    margin-bottom: .1rem;
-    max-width: 300px;
+.f-info-links, .f-info-socials, .f-info-brand {
+    width: 100%; /* Full width for all sections */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
-.company, .contact_us, .swapeco {
-    font-weight: 500;
-    margin-bottom: .2rem !important;
+.f-info-links a {
+    text-decoration: none; /* Remove underline */
+    color: #222222; /* Link color */
+    margin: 0 10px; /* Space between links */
+}
+
+.f-info-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.f-info-socials {
+    justify-content: center; /* Center social icons */
+}
+
+.f-info-socials i {
+    margin-right: 1rem; /* Space between icons */
+    font-size: 1.2rem; /* Icon size */
+}
+
+.f-info-brand {
+    margin: 5px 0; /* Space around brand text */
+}
+
+@media (max-width: 768px) {
+    .f-info {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        height: auto; /* Let the height adjust */
+    }
 }
 
 
@@ -607,6 +605,48 @@ img.rate_image {
     text-transform: uppercase;
 }
 
+/* form section start */
+#formContainer {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #1c1919;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#formContainer h4{
+    font-size: large;
+}
+
+#formContainer .button {
+    width: 100%;
+    padding: 10px;
+    background-color: #403e40;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ;
+  }
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: medium;
+}
+
+input, select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* form section end */
 
 
 

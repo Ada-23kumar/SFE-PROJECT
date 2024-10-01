@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrape uncle</title>
+    <title>Garbage Collection</title>
 
     <!-- from awseom cdn link  -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
      <!-- custom css file <link rel="stylesheet" href=""> -->
-      <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+     <link rel="icon" href="{{url_for('static', filename='images/logo.jpeg')}}" type="image/x-icon">
 
 </head>
 <body>
@@ -19,33 +20,25 @@
 
 <header class="header">
     <a href="#" class="logo">
-        <img src="images/logo.jpeg" alt="">
-
+        <img src="{{url_for('static', filename = 'images/logo.jpeg') }}" alt="logo">
     </a>
     <nev class="navbar">
         <a href="#home">home</a>
         <a href="#about">how it works</a>
         <a href="#whyus">why us?</a>
-        <a href="ScrapRate.html">Scrap Rate</a>
+        <a href="/ScrapRate">Scrap Rate</a>
 
     </nev>
     <div class="icons">
         <div class="fas fa-bars" id="menu-btn"></div>
         <div class="fas fa-user" id="user"></div>
         <div class="sign">
-            <a href="sign_in.html" class="fas fa-sign-out" id="sign_out">
+            <a href="/logout" class="fas fa-sign-out" id="sign_out">
             </a>
         </div>
     </div>
 
 <!-- example  of how to use the code -->
-    <div id="sidebar" class="sidebar">
-        <div class="user-details">
-            <h2>User Details</h2>
-            <p>Name: John Doe</p>
-            <p>Email: johndoe@example.com</p>
-        </div>
-    </div>
 
 
     
@@ -65,7 +58,7 @@
             online with <span class="highlight">GarbageCollector!</span></h3>
         <p>Paper - Plastics - Metals - Appliances</p>
         <p><span class="typewriter" id="typewriter"></span></p>
-        <a href="#" class="btn">Get Started</a>
+        <a href="#form" class="btn" id="getStartedBtn">Get Started</a>
         <!-- </div> -->
 </section>
 <!-- homw section end -->
@@ -162,6 +155,37 @@
  <!-- why us section end -->
 
 
+<!-- form section is start -->
+<section id="form">
+<div id="formContainer" style="display: none;">
+    <h4>Request a Pickup</h4>
+    <form id="pickupForm" method="post" action="/submit_pickup">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" required>
+
+        <label for="quantity">Quantity as per /kg:</label>
+        <input type="number" id="quantity" name="quantity" required>
+
+        <label for="garbageType">Garbage Type:</label>
+        <select id="garbageType" name="garbageType" required>
+            <option value="">Select type</option>
+            <option value="paper">Paper</option>
+            <option value="plastics">Plastics</option>
+            <option value="metals">Metals</option>
+            <option value="appliances">Appliances</option>
+        </select>
+
+        <input type="submit" class="button btn-primary btn-block btn-lg"  value="Login">
+    </form>
+</div>
+</section>
+ <!-- form section is end -->
 
 
 
@@ -171,13 +195,31 @@
 
 
 
+
+<!-- footer section start  -->
+
+<footer>
+    <div class="f-info">
+        <div class="f-info-socials">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div class="f-info-brand">&copy; Garbage collection Limited</div>
+        <div class="f-info-links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+        </div>
+    </div>
+</footer>
+ <!-- footer section end  -->
 
 
 
 
 
 <!-- costom js file  -->
- <script src="script.js"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
 
 </body>
 </html>

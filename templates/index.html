@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrape uncle</title>
+    <title>Garbage Collection</title>
 
     <!-- from awseom cdn link  -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
      <!-- custom css file <link rel="stylesheet" href=""> -->
       <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <link rel="icon" href="{{url_for('static', filename='images/logo.jpeg')}}" type="image/x-icon">
 
 </head>
 <body>
@@ -34,12 +35,12 @@
         
         <!-- <a href="sign_in.html" class="fas fa-sign-out" id="sign-out"></a> -->
         <div class="sign">
-            <a href="sign_in.html" class="fas fa-sign-in" id="sign_in">
+            <a href="/sign_in" class="fas fa-sign-in" id="sign_in">
             </a>
         </div>
     </div>
 
-    <!-- <a class="btn btn-outline-primary" href="/logout">Logout</a> -->
+    <!-- <a class="btn btn-outline-primary" href="/logout">Logout</a> --anad@123>
 </header>
 
 
@@ -55,7 +56,8 @@
             online with <span class="highlight">GarbageCollector!</span></h3>
         <p>Paper - Plastics - Metals - Appliances</p>
         <p><span class="typewriter" id="typewriter"></span></p>
-        <a href="#" class="btn">Get Started</a>
+    
+        <a href="/sign_in" class="btn btn-outline-primary">Get Started</a>
         <!-- </div> -->
 </section>
 <!-- homw section end -->
@@ -208,32 +210,20 @@
 
 <!-- footer section start  -->
 
-<footer class="footer_section">
-    <div class="container footer_container">
-        <div class="row footer_padding">
-            <div class="col-md-4">
-                <p class="contact_us">Contact Us</p>
-            </div>
-            <div class="col-md-4">
-                <p class="social_media">Social media</p>
-            </div>
-            <div class="col-md-4 footer-address">
-                <p class="footer_address">kalasalingam university</p>
-            </div>
+<footer>
+    <div class="f-info">
+        <div class="f-info-socials">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div class="f-info-brand">&copy; Garbage collection Limited</div>
+        <div class="f-info-links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
         </div>
     </div>
-    <div class="helper-action"><button>+</button>
-        <ul>
-            <li><img
-                        src="https://ikp.edgekit.net/h1rxzpffx/scrapuncle/assets/telephone-call_0Etr04ShlH.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1675339109083"
-                        style="background: rgb(255, 255, 255); border-radius: 100%;"></a></li>
-            <li><img
-                        src="https://ikp.edgekit.net/h1rxzpffx/scrapuncle/assets/whatsapp_VhssjIqsN5.png?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1675339111494"></a>
-            </li>
-        </ul>
-    </div>
 </footer>
-
  <!-- footer section end  -->
 
 
